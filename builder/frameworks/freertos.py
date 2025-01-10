@@ -15,8 +15,9 @@ if chip_series.startswith("ch5"):
     # we need to make use of that special startup file which redirects all interrupts speciall
     board.update("build.use_builtin_startup_file", "no")
 
-# import NoneOS SDK settings
-env.SConscript("noneos_sdk.py")
+if "arduino" not in env.get("pioframework", []):
+    # import NoneOS SDK settings
+    env.SConscript("noneos_sdk.py")
 
 FRAMEWORK_DIR = platform.get_package_dir("framework-wch-freertos")
 assert isdir(FRAMEWORK_DIR)

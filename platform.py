@@ -96,7 +96,7 @@ class Ch32vPlatform(PlatformBase):
             return super().configure_default_packages(variables, targets)
         # The FreeRTOS, Harmony LiteOS and RT-Thread package needs the 
         # NoneSDK as a base package
-        if any([framework in frameworks for framework in ("freertos", "harmony-liteos", "rt-thread", "tencent-os")]):
+        if any([framework in frameworks for framework in ("freertos", "harmony-liteos", "rt-thread", "tencent-os")]) and "arduino" not in frameworks:
             self.packages["framework-wch-noneos-sdk"]["optional"] = False
         # upload via USB bootloader wanted? (called "isp" in our platform)
         # then activate package

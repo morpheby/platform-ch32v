@@ -15,7 +15,7 @@ if chip_series.startswith("ch5"):
     # we need to make use of that special startup file which redirects all interrupts speciall
     board.update("build.use_builtin_startup_file", "no")
 
-if "arduino" not in env.get("pioframework", []):
+if "arduino" not in platform.frameworks:
     # import NoneOS SDK settings
     env.SConscript("noneos_sdk.py")
 

@@ -86,7 +86,7 @@
       "type": "framework",
       "optional": true,
       "owner": "platformio",
-      "version": "https://github.com/Community-PIO-CH32V/framework-wch-freertos.git"
+      "version": "https://github.com/morpheby/framework-wch-freertos.git#arduino"
     },
     "framework-wch-harmony-liteos": {
       "type": "framework",

@@ -43,7 +43,7 @@ env.Replace(
     RANLIB="%s-ranlib" % compiler_triple,
     SIZETOOL="%s-size" % compiler_triple,
     ARFLAGS=["rc"],
-    SIZEPROGREGEXP=r"^(?:\.text|\.data|\.rodata|\.text.align|\.init|\.vector)\s+(\d+).*",
+    SIZEPROGREGEXP=r"^(?:\.text|\.data|\.rodata|\.text.align|\.init|\.vector|\.dflash)\s+(\d+).*",
     SIZEDATAREGEXP=r"^(?:\.data|\.bss|\.noinit|\.stack)\s+(\d+).*",
     SIZECHECKCMD="$SIZETOOL -A -d $SOURCES",
     SIZEPRINTCMD="$SIZETOOL --format=berkeley $SOURCES",

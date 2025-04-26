@@ -31,7 +31,7 @@
   "name": "Generic CH32V203K8T6",
   "upload": {
     "maximum_ram_size": 20480,
-    "maximum_size": 65536,
+    "maximum_size": 229376,
     "protocol": "wch-link",
     "protocols": [
       "wch-link",
